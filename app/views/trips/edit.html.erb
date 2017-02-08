@@ -1,0 +1,30 @@
+
+<div id="form-trip">
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m6 center">
+
+        <p>Edit Your Itinirary below</p>
+
+        <%= form_for @trip do |f| %>
+
+
+
+          <%= f.text_field :origin, placeholder: 'Origin' %>
+          <br/><br>
+          <%= f.text_field :destination, placeholder: 'Destination' %>
+          <br/>
+          <h5>Departing : </h5>
+          <!--  match field to schema-->
+          <%= f.datetime_field :month, as: :date_picker, :input_html => { :value => Date.today} %>
+            <%= f.collection_select :creator_id, Trip.all, :id, :origin %><br>
+
+          <br><br>
+          <%= f.submit 'Edit itinirary' %>
+          <% end %>
+
+
+      </div>
+    </div>
+  </div>
+</div>

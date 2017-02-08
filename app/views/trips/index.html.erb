@@ -1,0 +1,56 @@
+
+
+
+
+
+<!-- video background -->
+<div class="homepage-hero-module">
+  <div class="video-container">
+    <div class="filter"></div>
+    <video autoplay loop class="fillWidth">
+        <source src="/assets/In-And-Out.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+        <!-- <source src="PATH_TO_WEBM" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser. -->
+    </video>
+    <div class="poster hidden">
+        <!-- <img src="PATH_TO_JPEG" alt=""> -->
+    </div>
+  </div>
+</div>
+
+<div id="trips-index">
+  <div class="container trips" >
+
+    <div class="row info">
+    <% @trips.each do |trip| %>
+        <div class="col s12 m4">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Upcoming Trips</span>
+                <h5>  <%= trip.origin %>
+                <i class="material-icons">arrow_forward</i>
+                <%= trip.destination %></h5>
+                Time: <%= trip.month %><br>
+                <h5>Driver profile :</h5>
+                <% @userid= trip.creator_id %>
+                <% @user= User.find(@userid) %>
+                <%= @user.fname%>
+                <%= @user.lname %><br>
+                <%= @user.gender %>
+                <br>
+                <%= @user.email %></p>
+            </div>
+            <div class="card-action">
+              <a><%= link_to ("Reserve your spot!"), trip_path(trip.id)%></a>
+                <br>
+              <a><%= link_to ("change your trip"),  edit_trip_path(trip.id)%></a>
+                <br>
+              <a><%= link_to ("cancel"), { action: :destroy, id: trip.id }, method: :delete %></a>
+
+            </div>
+          </div>
+        </div>
+    <%end  %>
+    </div>
+  </div>
+  <!-- end container -->
+</div>

@@ -1,0 +1,288 @@
+
+
+body {
+
+  min-height: 100vh;
+  background-color: #FFF;
+  // background: url(background.jpg);
+  // font-family: "sommet-rounded-light",Helvetica,Arial,sans-serif;
+  margin: 0;
+
+  font-family: 'Lato', sans-serif;
+
+    nav {
+      background: #163145;
+       a.brand-logo  {
+         font-family: 'Lato', sans-serif;
+         padding-left: 10px;
+      }
+    }
+
+    // Logo in nav:
+    .nav-flex-container {
+      // flex properties:
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      font-family: 'Lato', sans-serif;
+      font-weight: 200;
+
+      .logo-ride {}
+      .logo-two {
+        font-size: 65px;
+      }
+      .logo-go {}
+    }
+
+
+    // LIZA:
+    .flex-container {
+
+      // flex properties:
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      // BG properties:
+      background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("http://www.littlepalmisland.com/~/media/AD7901F402EB4C66B5CD5565D1849EAB.ashx");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      // font stuff:
+      font-size: 6em;
+      color: white;
+
+      // font-family: 'Raleway', sans-serif;
+      font-family: 'Lato', sans-serif;
+      font-weight: 200;
+
+      .ride {
+
+      }
+      .two {
+        font-size: 5em;
+      }
+      .go {
+
+      }
+    } // end .flex-container
+
+
+    .upcoming-trips-container {
+      background-color: #DAD6D6;
+      padding-top: 100px;
+      padding-bottom: 100px;
+
+
+      .trips {
+        background-color: #DAD6D6;
+      }
+
+      .section-name {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 300;
+        font-size: 60px;
+        color: #34495e;
+      }
+
+
+
+      .card {
+        background-color: #34495e;
+
+
+        .card-title {
+          font-size: 30px;
+        }
+      }
+
+      a {
+        color: white;
+      }
+    } // end .upcoming-trips-container
+
+
+
+      img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+      }
+
+      .landing img{
+        width: 100%;
+        height: 600px;
+      }
+
+      .chip {
+        width: 250px;
+        background-color: #FFF;
+      }
+
+      .mission {
+        text-align: center;
+        padding-top: 15px;
+      }
+
+
+      .mission2 {
+        //  background: -webkit-linear-gradient(bottom, #2D5477 0%, rgba(88, 158, 80, 0) 100%);
+        margin-top: 30px;
+        text-align: center;
+        background-color: #F0B27A;
+        margin: 60px;
+      }
+
+      .trips {
+        width: 100%;
+        height:auto;
+        // background-color: #2a6ebb;
+        // margin-top: -80px;
+        // background-color: #E5ECE7;
+        color: black;
+       }
+
+
+
+
+
+      // create trip form page
+      input#trip_origin {
+        background-color: #faebd7;
+      }
+
+      input#trip_destination {
+        background-color: #faebd7;
+      }
+
+      input#trip_month {
+        background-color: #faebd7;
+      }
+
+      // margin top for user card
+
+      .container  {
+        // display: flex;
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+        // height: 100%;
+        // width: 100%;
+      }
+
+
+
+      #users-show {
+
+        div.card {
+          margin-top: 60px;
+          z-index: -1;
+          bottom: 15px;
+          left: 10px;
+          width: 50%;
+          top: 80%;
+          background: #7d7569;
+          box-shadow: 0 15px 10px #777;
+          color: #fff;
+          font-size: 1em;
+          border-radius: 10px;
+          margin-left: 190px;
+
+           .card-content {
+             padding-top: 50px;
+           }
+         }
+
+         .card .card-image img {
+           object-fit: cover;
+           width: 100%;
+           height: 400px;
+         }
+       }// end #user-show
+
+       #form-trip {
+         background-color: #163145;
+         width: 850px;
+         height: 600px;
+         margin-left: 450px;
+         margin-top: 90px;
+         border-radius: 10px;
+         color: white;
+         padding-left: 200px;
+         padding-top: 10px;
+         font-family: 'Raleway', sans-serif;
+         font-size: 25px;
+         input {
+           color: black;
+         }
+       }
+
+       #show-trip {
+         background-color: #163145;
+         width: 850px;
+         height: auto;
+         margin-left: 350px;
+         margin-top: 150px;
+         border-radius: 10spx;
+         color: white;
+         text-align: left;
+         padding-top: 10px;
+         padding-bottom: 10px;
+         font-family: 'Raleway', sans-serif;
+         font-size: 25px;
+         .creator-name {
+           color: orange;
+           font-size: 40px;
+         }
+       }
+
+       .modal-content {
+         color: black;
+       }
+
+
+      //  trip index page
+
+       .container .trips {
+         margin-left: 20px;
+         padding-left: 20px;
+
+         i .material-icons {
+           margin: -2px;
+         }
+       }
+
+
+       // create trip button orange style
+       .input-field input {
+         background-color: orange;
+         margin-left: 15px;
+       }
+
+
+
+       // new trip form
+       .form {
+         background-color: #163145;
+         width: 50%;
+         height: 500px;
+         margin-top: 60px;
+         padding-top: 50px;
+         padding-left: 40px;
+         font-family: 'Raleway', sans-serif;
+         border-radius: 10px;
+         box-shadow: 0 15px 10px #777;
+         input {
+           color: black;
+         }
+       }
+
+
+
+
+
+}     //end of body

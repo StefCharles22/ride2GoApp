@@ -1,0 +1,35 @@
+
+<!--  form for date picker-->
+
+<center><h3>Choose your Itinerary</h3>
+<div class="row form">
+
+    <%= form_for @trip do |f| %>
+      <div class="row">
+        <div class="input-field col s5 offset-s3">
+          <%= f.text_field :origin, placeholder: 'Origin' %>
+          <br/><br>
+        </div>
+        <div class="input-field col s5 offset-s3">
+          <%= f.text_field :destination, placeholder: 'Destination' %>
+        </div>
+      </div> <!-- en of div row -->
+
+
+
+          <!--  match field to schema below-->
+
+      <div class="row">
+        <div class="input-field col s5 offset-s3">
+          <%= f.datetime_field :month, as: :date_picker, :input_html => { :value => Date.today} %>
+          <br><br>
+        </div>
+        <div class="input-field col s6 ">
+          <%= f.collection_select :creator_id, User.all, :id, :fname%><br>
+        </div>
+      </div>
+      <div class="input-field col s3 offset-s4 ">
+        <%= f.submit 'Create trip' %>
+      </div>
+    <% end %>
+</div>

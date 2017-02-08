@@ -1,0 +1,61 @@
+
+  <!-- <div class="mission">
+    <h4>Share a ride, save the planet!</h4>
+  </div> -->
+
+
+<div class="flex-container" id="changing-imgs">
+  <div class="ride">
+    R I D E
+  </div>
+  <div class="two">
+    2
+  </div>
+  <div class="go">
+    G O
+  </div>
+</div>
+
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+
+
+
+<div class="upcoming-trips-container">
+
+  <div class="container">
+
+    <div class="trips">
+
+      <div class="row">
+        <div class="section-name">
+          <div class="section-name-top col s4 offset-s4">TOP TRIPS</div>
+        </div>
+      </div>
+
+
+      <div class="row">
+      <% @trips.each do |trip| %>
+
+          <div class="col s3 m5">
+            <a href="<%= trip_path(trip.id) %>">
+              <div class="card">
+                <div class="card-content">
+                  <span class="thin-line"></span>
+                  <span class="card-title"><%= trip.origin %>
+                    <i class="material-icons">arrow_forward</i>
+                    <%= trip.destination %>
+                  </span>
+                </div>
+              </div>
+          </a>
+        </div>
+
+      <% end %>
+      </div>
+
+    </div>
+  </div>
+</div>

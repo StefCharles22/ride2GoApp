@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FinalProject</title>
+      <%= csrf_meta_tags %>
+
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+
+
+      <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900|Raleway:100,200,300,400,700" rel="stylesheet">
+
+
+      <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+
+
+     <!--Let browser know website is optimized for mobile-->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+      <!--Import jQuery before materialize.js-->
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  </head>
+
+ <body>
+
+
+  <div class="nav-wrapper">
+
+    <nav>
+      <a href="/" class="brand-logo nav-flex-container">
+        <span class="logo-ride">Ride</span>
+        <span class="logo-two">2</span>
+        <span class="logo-go">Go</span>
+      </a>
+
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <% if (user_signed_in?) %>
+
+            <li>  <%= link_to "Sign out", { :action => "destroy",  :controller=> "devise/sessions"}, method: :delete %> </li>
+            <li><a> <%= link_to "Home", home_page_path %> </a></li>
+            <li><a> <%= link_to " All Trips", trips_path %> </a></li>
+            <li><a> <%= link_to "Profile", user_session_path %> </a></li>
+            <li><a> <%= link_to "create your itinirary", new_trip_path %> </a> </li>
+        <% else %>
+            <li><a> <%= link_to "Sign Up", new_user_registration_path %> </a></li>
+            <li><a> <%= link_to "Sign In", new_user_session_path %> </a></li>
+            <li><a> <%= link_to "Home", home_page_path %> </a></li>
+        <% end %>
+      </ul>
+
+        <ul class="side-nav" id="mobile-demo">
+          <li><a> <%= link_to "Home", home_page_path %> </a></li>
+          <li><a> <%= link_to "Sign Up", new_user_registration_path %> </a></li>
+          <li>  <%= link_to "Sign out", { :action => "destroy",  :controller=> "devise/sessions"}, method: :delete %> </li>
+          <li><a> <%= link_to "create your itinirary", new_trip_path %> </a></li>
+          <li><a> <%= link_to "All Trips", trips_path %> </a></li>
+        </ul>
+
+      </nav>
+    </div>
+
+
+
+
+
+    <div>
+      <%= yield %>
+    </div>
+
+    <!-- devise -->
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+
+
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <script src="http://materializecss.com/templates/starter-template/js/init.js"></script>
+  </body>
+</html>

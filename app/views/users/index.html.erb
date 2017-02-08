@@ -1,0 +1,11 @@
+<h1>this is where u see all users </1>
+
+  <% @all_users.each do |user| %>
+  <br>
+  <h2> Gender: <%= user.gender %></h2>
+  <br>
+  <h3> Smoking? <%= user.smoking %></h3>
+  <br>
+  <h3> Profile : <%= image_tag user.avatar.url %></h3>
+
+  <% end %>

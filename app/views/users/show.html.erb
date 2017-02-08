@@ -1,0 +1,33 @@
+<div id="users-show">
+
+
+  <!-- user personal show page -->
+<center><h3>My Profile Page</h3>
+
+  <div class="container center">
+    <div class="row valign-wrapper">
+         <div class="col s12 m11">
+           <div class="card large blue-grey darken-1">
+             <div class="card-image ">
+               <%= image_tag @user.avatar.url %>
+               <span class="card-title">My Profile</span>
+             </div>
+             <div class="card-content">
+               <p>FIRST NAME : <%= @user.fname %></p>
+               <p> LAST NAME : <%= @user.lname %></p>
+               <p>EMAIL : <%= @user.email %></p>
+
+               <p>GENDER : <%= @user.gender%></p>
+               <% if @user.smoking == true%>
+               <p>Smoking status : YES</p>
+               <%else%>
+               <p>Smoking status : No</p>
+               <%end%>
+
+             </div>
+
+           </div>
+         </div>
+       </div>
+  </div>
+</div>

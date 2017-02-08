@@ -1,0 +1,69 @@
+<div id="show-trip">
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <!--  grabbing user first name -->
+        <h2 class="creator-name">Wanna Ride with <%= @trip.creator.fname %> !</h2>
+
+        <br>
+        <h4>
+          <%= @trip.origin %>
+          <i class="material-icons">arrow_forward</i>
+          <%= @trip.destination %>
+        </h4>
+
+        <h5> TIME : <%= @trip.month %></h5>
+        <br>
+
+
+        <h5>Current Passengers:</h5>
+        <% @riders_arr.each do |rider| %>
+            <li>
+              <%= rider.gender %>  :
+              <%= rider.fname %>
+            </li>
+          <% end %>
+          <br>
+
+
+          <!-- Modal Trigger -->
+          <a class="modal-trigger waves-effect waves-light btn" href="#modal1">Join the Trip</a>
+
+          <!-- Non modal-form to join existing trip-->
+          <!-- Modal Structure -->
+          <div id="modal1" class="modal">
+            <div class="modal-content">
+
+              <h3>Request to Join Trip:</h3>
+
+              <%= form_tag("/trips/send-request", method: "post") do |f| %>
+              <%= label_tag(:to_email, "To:")%>
+              <%= text_field_tag :to_email, @creator.email %>
+
+              <%= label_tag(:from_email, "From:")%>
+              <%= text_field_tag :from_email, current_user.email %>
+
+              <%= hidden_field_tag(:creator_id, @creator.id) %>
+              <%= hidden_field_tag(:current_user_id, current_user.id) %>
+              <%= hidden_field_tag(:trip_id, @trip.id) %>
+
+              <%= submit_tag "Send" %>
+              <% end %>
+            </div>
+
+
+            <div class="modal-footer">
+              <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Off you go</a>
+            </div>
+          </div> <!--end of modal -->
+
+
+
+
+
+        </div> <!--  end of Col -->
+      </div>
+      <!-- end row -->
+    </div>
+    <!-- end container -->
+  </div> <!-- end of id show-trip  -->
