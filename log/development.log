@@ -832,3 +832,2018 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 38ms (Views: 34.0ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-02-10 15:59:17 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#home as HTML
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 317ms (Views: 288.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-10 15:59:17 -0500
+Processing by WelcomeController#home as HTML
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 30ms (Views: 27.6ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-02-10 15:59:23 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yjbAOt/Rrk6bmHgfmcbCkW3RdPW1fgjqH5jbU67+Vj1Rri//53xOCcB5pmni5gP+3R0yl5mtuO34yJ6rAn4Upw=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 20ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-10 15:59:23 -0500
+Processing by WelcomeController#home as HTML
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 32ms (Views: 28.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-02-10 15:59:25 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (43.5ms)
+Completed 200 OK in 85ms (Views: 83.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-10 16:01:16 -0500
+Processing by WelcomeController#home as HTML
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 100ms (Views: 96.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-02-10 16:03:08 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 122ms (Views: 119.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-02-10 16:03:19 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/n1rOoWcB/v3JTOHFuV+JPGZ7IwTeAcfYRPp+B6GfuNHbZcVNWxfaH5zPw6T/pfklgDS/4SZD5w3CXGNc+8QjA==", "user"=>{"email"=>"stef@nycda.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "stef@nycda.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_created_at", 2017-02-10 21:03:20 UTC], ["updated_at", 2017-02-10 21:03:20 UTC], ["id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 3], ["current_sign_in_at", 2017-02-10 21:03:20 UTC], ["last_sign_in_at", 2017-02-10 20:34:22 UTC], ["updated_at", 2017-02-10 21:03:20 UTC], ["id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 209ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-02-10 16:03:20 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 62ms (Views: 53.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/trips/new" for 127.0.0.1 at 2017-02-10 16:03:24 -0500
+Processing by TripsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered trips/new.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 118ms (Views: 84.9ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/trips" for 127.0.0.1 at 2017-02-10 16:03:43 -0500
+Processing by TripsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YdwnY8i86kWHDEF1yZsMME7sFhSsKGZEukhFxEbHljTj3LCgY6+OtKh5FtDRM7QerLRZ+THtCg1yrMAj5Tz0Hw==", "trip"=>{"origin"=>"NEW YORK", "destination"=>"Chicago", "month"=>"2017-02-28T16:30", "creator_id"=>"1"}, "commit"=>"Create trip"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "trips" ("created_at", "updated_at", "origin", "destination", "month", "creator_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", 2017-02-10 21:03:43 UTC], ["updated_at", 2017-02-10 21:03:43 UTC], ["origin", "NEW YORK"], ["destination", "Chicago"], ["month", 2017-02-28 16:30:00 UTC], ["creator_id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/trips
+Completed 302 Found in 80ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/trips" for 127.0.0.1 at 2017-02-10 16:03:43 -0500
+Processing by TripsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trips/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 61ms (Views: 53.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/trips/3" for 127.0.0.1 at 2017-02-10 16:03:52 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_trips" ON "users"."id" = "user_trips"."rider_id" WHERE "user_trips"."trip_id" = ?[0m  [["trip_id", 3]]
+  Rendered trips/show.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 133ms (Views: 52.8ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/trips/send-request" for 127.0.0.1 at 2017-02-10 16:03:59 -0500
+Processing by TripsController#send_request as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mHyPmEeaAao58coo8vA8mXG1YcicFQjCE9sjSjy6JJCuig9DlnM49QKMwvc+NqC/yRUMzsxh1C9x1tkHil1u3w==", "to_email"=>"stef@nycda.com", "from_email"=>"stef@nycda.com", "creator_id"=>"1", "current_user_id"=>"1", "trip_id"=>"3", "commit"=>"Send"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "user_trips" ("trip_id", "rider_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["trip_id", 3], ["rider_id", 1], ["created_at", 2017-02-10 21:03:59 UTC], ["updated_at", 2017-02-10 21:03:59 UTC]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+No template found for TripsController#send_request, rendering head :no_content
+Completed 204 No Content in 169ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/trips/3" for 127.0.0.1 at 2017-02-10 16:04:01 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrip Load (1.8ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_trips" ON "users"."id" = "user_trips"."rider_id" WHERE "user_trips"."trip_id" = ?[0m  [["trip_id", 3]]
+  Rendered trips/show.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 62ms (Views: 47.0ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/trips" for 127.0.0.1 at 2017-02-10 16:04:05 -0500
+Processing by TripsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Load (0.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trips/index.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 559ms (Views: 543.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/trips/3/edit" for 127.0.0.1 at 2017-02-10 16:04:10 -0500
+Processing by TripsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering trips/edit.html.erb within layouts/application
+  [1m[36mTrip Load (0.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  Rendered trips/edit.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 137ms (Views: 115.3ms | ActiveRecord: 1.3ms)
+
+
+Started PATCH "/trips/3" for 127.0.0.1 at 2017-02-10 16:04:18 -0500
+Processing by TripsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cfbfrSOmp+tmpUGHO5EjvABe9QPPZw9OiPxBm065tCSVhsmgWJ5sJDSZBYsiSMDbolYp5FKR5/ZBJkUg1avy8A==", "trip"=>{"origin"=>"NEW YORK", "destination"=>"Arizona", "month"=>"2017-02-28T16:30:00", "creator_id"=>"1"}, "commit"=>"Edit itinirary", "id"=>"3"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.3ms)[0m  [1m[33mUPDATE "trips" SET "destination" = ?, "updated_at" = ? WHERE "trips"."id" = ?[0m  [["destination", "Arizona"], ["updated_at", 2017-02-10 21:04:18 UTC], ["id", 3]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/trips/3
+Completed 302 Found in 22ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/trips/3" for 127.0.0.1 at 2017-02-10 16:04:18 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_trips" ON "users"."id" = "user_trips"."rider_id" WHERE "user_trips"."trip_id" = ?[0m  [["trip_id", 3]]
+  Rendered trips/show.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 52ms (Views: 38.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-10 16:04:24 -0500
+Processing by WelcomeController#home as HTML
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 59.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/trips/2" for 127.0.0.1 at 2017-02-10 16:04:30 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_trips" ON "users"."id" = "user_trips"."rider_id" WHERE "user_trips"."trip_id" = ?[0m  [["trip_id", 2]]
+  Rendered trips/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 75ms (Views: 62.5ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/trips/send-request" for 127.0.0.1 at 2017-02-10 16:04:35 -0500
+Processing by TripsController#send_request as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LL8hMixlM7OEYEYwDdhtwmASy6Y1AmWr4TKpu18xAKAaSaHp/YwK7L8dTu/BHvHk2LKmoGV2uUaDP1P26dZK7w==", "to_email"=>"stef@nycda.com", "from_email"=>"stef@nycda.com", "creator_id"=>"1", "current_user_id"=>"1", "trip_id"=>"2", "commit"=>"Send"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "user_trips" ("trip_id", "rider_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["trip_id", 2], ["rider_id", 1], ["created_at", 2017-02-10 21:04:35 UTC], ["updated_at", 2017-02-10 21:04:35 UTC]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+No template found for TripsController#send_request, rendering head :no_content
+Completed 204 No Content in 174ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/trips/2" for 127.0.0.1 at 2017-02-10 16:04:37 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_trips" ON "users"."id" = "user_trips"."rider_id" WHERE "user_trips"."trip_id" = ?[0m  [["trip_id", 2]]
+  Rendered trips/show.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 94ms (Views: 78.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-02-10 16:04:41 -0500
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/1
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 9ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-02-10 16:04:41 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 55ms (Views: 43.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/trips/new" for 127.0.0.1 at 2017-02-10 16:04:45 -0500
+Processing by TripsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered trips/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 64ms (Views: 55.5ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/trips" for 127.0.0.1 at 2017-02-10 16:05:11 -0500
+Processing by TripsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LPJz5JNJoge2k6d/36NhIcJR7VlzXVMK5EaY496BCEeu8uQnOFrG9pnm8NrHC9kPIAmitO6YP0Msoh0EfXpqbA==", "trip"=>{"origin"=>"Bronx", "destination"=>"Philadelphia", "month"=>"2017-03-07T01:20", "creator_id"=>"1"}, "commit"=>"Create trip"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "trips" ("created_at", "updated_at", "origin", "destination", "month", "creator_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", 2017-02-10 21:05:11 UTC], ["updated_at", 2017-02-10 21:05:11 UTC], ["origin", "Bronx"], ["destination", "Philadelphia"], ["month", 2017-03-07 01:20:00 UTC], ["creator_id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/trips
+Completed 302 Found in 16ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/trips" for 127.0.0.1 at 2017-02-10 16:05:11 -0500
+Processing by TripsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trips/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 74ms (Views: 63.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/trips/4" for 127.0.0.1 at 2017-02-10 16:05:17 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_trips" ON "users"."id" = "user_trips"."rider_id" WHERE "user_trips"."trip_id" = ?[0m  [["trip_id", 4]]
+  Rendered trips/show.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 78ms (Views: 57.8ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/trips/send-request" for 127.0.0.1 at 2017-02-10 16:05:21 -0500
+Processing by TripsController#send_request as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"995cF8WNMQX8ikAftqus9mVMUcPkKjAHn3MJh/aQ39rBKNzMFGQIWsf3SMB6bTDQ3ew8xbRe7Or9fvPKQHeVlQ==", "to_email"=>"stef@nycda.com", "from_email"=>"stef@nycda.com", "creator_id"=>"1", "current_user_id"=>"1", "trip_id"=>"4", "commit"=>"Send"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "user_trips" ("trip_id", "rider_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["trip_id", 4], ["rider_id", 1], ["created_at", 2017-02-10 21:05:21 UTC], ["updated_at", 2017-02-10 21:05:21 UTC]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+No template found for TripsController#send_request, rendering head :no_content
+Completed 204 No Content in 181ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/trips/4" for 127.0.0.1 at 2017-02-10 16:05:23 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_trips" ON "users"."id" = "user_trips"."rider_id" WHERE "user_trips"."trip_id" = ?[0m  [["trip_id", 4]]
+  Rendered trips/show.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 88ms (Views: 70.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-10 16:05:27 -0500
+Processing by WelcomeController#home as HTML
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 124ms (Views: 109.2ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-02-10 16:15:44 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"mCpFDmYlBIZiIwP2SCw3bZHO7QBmpzJVkv4n6KhqmCi2MJfAIxMMPRanL/VmkW1JhLQO3wapJ+JInXp/C3Xyaw=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_created_at", nil], ["updated_at", 2017-02-10 21:15:44 UTC], ["id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-10 16:15:44 -0500
+Processing by WelcomeController#home as HTML
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 39ms (Views: 35.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-02-10 16:16:02 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 62ms (Views: 59.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-02-10 16:16:13 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fFb8Bo0nUNg85n2uLY+w3eUfuOCrHBzJwmEnpC8UT0LD1sEKl2kznrhUUkFwuXzyKA+5Gq6paydOfc33tz4izA==", "user"=>{"email"=>"stef@nycda.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "stef@nycda.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 146ms (ActiveRecord: 0.5ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fFb8Bo0nUNg85n2uLY+w3eUfuOCrHBzJwmEnpC8UT0LD1sEKl2kznrhUUkFwuXzyKA+5Gq6paydOfc33tz4izA==", "user"=>{"email"=>"stef@nycda.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 189ms (Views: 52.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-10 16:16:17 -0500
+Processing by WelcomeController#home as HTML
+  [1m[36mTrip Load (0.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 103ms (Views: 89.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/trips/1" for 127.0.0.1 at 2017-02-10 16:16:23 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-02-10 16:16:23 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 68ms (Views: 59.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-02-10 16:17:09 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 99ms (Views: 90.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-02-10 16:17:11 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 92ms (Views: 88.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-10 16:17:12 -0500
+Processing by WelcomeController#home as HTML
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 79ms (Views: 72.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-02-10 16:17:17 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 84ms (Views: 82.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-02-10 16:18:34 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nSkeO5IiFspfUde19fcmXdl5TffXJb7rEJZKcV6h6csiqSM3iGx1jNvj+FqowepyFGlMDdKQyQWciqAixouERQ==", "user"=>{"email"=>"stef@nycda.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "stef@nycda.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-02-10 21:18:34 UTC], ["last_sign_in_at", 2017-02-10 21:03:20 UTC], ["sign_in_count", 4], ["updated_at", 2017-02-10 21:18:34 UTC], ["id", 1]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 146ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-02-10 16:18:34 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 27ms (Views: 24.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-02-10 16:20:01 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 29ms (Views: 25.6ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-02-10 16:20:09 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"OG+c9lAsLm0wIN7toY5Q5LHQg03Gz6k5+7R0SzDP91uIV5hUYKV0JVGN6sAG0g7lylkG4F1F+T/V1kpYweLrnQ=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-10 16:20:09 -0500
+Processing by WelcomeController#home as HTML
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 33ms (Views: 28.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-02-10 16:20:11 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 43ms (Views: 38.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-02-10 16:20:21 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HYkqKjlGYCD4/SUK8h4G5hooTwXcEZpCdm5z2C6o01pmwjIvm95t8aSYDJZnpl0Pf4P4DWftUK4AvyhApqLyCg==", "user"=>{"email"=>"stef@nycda.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "stef@nycda.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_created_at", 2017-02-10 21:20:21 UTC], ["updated_at", 2017-02-10 21:20:21 UTC], ["id", 1]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 5], ["current_sign_in_at", 2017-02-10 21:20:21 UTC], ["last_sign_in_at", 2017-02-10 21:18:34 UTC], ["updated_at", 2017-02-10 21:20:21 UTC], ["id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 152ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-02-10 16:20:21 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 28ms (Views: 25.0ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-02-10 16:20:28 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7d4kgBKq6d19FNcISBrED7tO2mKa1j8y0EPjIQsl1M2O4iSO5NnTUzwEP0XKrZfhvbQ36+kRVh5oKGvWe0RuUg=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_created_at", nil], ["updated_at", 2017-02-10 21:20:28 UTC], ["id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-10 16:20:29 -0500
+Processing by WelcomeController#home as HTML
+  [1m[36mTrip Load (0.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 30ms (Views: 23.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-02-10 16:21:00 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 85ms (Views: 75.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-02-10 16:21:10 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gXkfi8wuA5dJQdAoVkLfNlE9hCWKSyvf1lQ4PEbX1Vbiy+78NSO9jkuNpXKZSphO0U4+7irwflmiLlGRiAL10w==", "user"=>{"email"=>"stef@nycda.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "stef@nycda.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_created_at", 2017-02-10 21:21:11 UTC], ["updated_at", 2017-02-10 21:21:11 UTC], ["id", 1]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 6], ["current_sign_in_at", 2017-02-10 21:21:11 UTC], ["last_sign_in_at", 2017-02-10 21:20:21 UTC], ["updated_at", 2017-02-10 21:21:11 UTC], ["id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 169ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-02-10 16:21:11 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 39ms (Views: 34.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-10 16:21:15 -0500
+Processing by WelcomeController#home as HTML
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 75ms (Views: 64.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/trips/2" for 127.0.0.1 at 2017-02-10 16:21:24 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_trips" ON "users"."id" = "user_trips"."rider_id" WHERE "user_trips"."trip_id" = ?[0m  [["trip_id", 2]]
+  Rendered trips/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 83ms (Views: 54.6ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/trips/send-request" for 127.0.0.1 at 2017-02-10 16:21:30 -0500
+Processing by TripsController#send_request as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EQO79ROGblIWy2kYThJ/KgY1VgWotMF4R1U22CI4kXkNVfdHaJNXxwAxIhDckyC3QVwGO6P9A5mSNkagqiH7tg==", "to_email"=>"stef@nycda.com", "from_email"=>"stef@nycda.com", "creator_id"=>"1", "current_user_id"=>"1", "trip_id"=>"2", "commit"=>"Send"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.8ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "user_trips" ("trip_id", "rider_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["trip_id", 2], ["rider_id", 1], ["created_at", 2017-02-10 21:21:30 UTC], ["updated_at", 2017-02-10 21:21:30 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+No template found for TripsController#send_request, rendering head :no_content
+Completed 204 No Content in 198ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/trips/2" for 127.0.0.1 at 2017-02-10 16:21:31 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_trips" ON "users"."id" = "user_trips"."rider_id" WHERE "user_trips"."trip_id" = ?[0m  [["trip_id", 2]]
+  Rendered trips/show.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 103ms (Views: 76.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/trips/new" for 127.0.0.1 at 2017-02-10 16:21:35 -0500
+Processing by TripsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered trips/new.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 84ms (Views: 70.0ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/trips" for 127.0.0.1 at 2017-02-10 16:21:57 -0500
+Processing by TripsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cWDeRB/4ell1PDhRO+uWRd0fDNACdinkyOSXNeJYBkrddMC+/9Xn70FW6KDuwkY0UhrHJ6wCemqoxxK92m+r1A==", "trip"=>{"origin"=>"Dallas", "destination"=>"Houston", "month"=>"2017-02-27T15:30", "creator_id"=>"1"}, "commit"=>"Create trip"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "trips" ("created_at", "updated_at", "origin", "destination", "month", "creator_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", 2017-02-10 21:21:58 UTC], ["updated_at", 2017-02-10 21:21:58 UTC], ["origin", "Dallas"], ["destination", "Houston"], ["month", 2017-02-27 15:30:00 UTC], ["creator_id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/trips
+Completed 302 Found in 19ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/trips" for 127.0.0.1 at 2017-02-10 16:21:58 -0500
+Processing by TripsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Load (0.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trips/index.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 98ms (Views: 89.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/trips/5" for 127.0.0.1 at 2017-02-10 16:22:09 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_trips" ON "users"."id" = "user_trips"."rider_id" WHERE "user_trips"."trip_id" = ?[0m  [["trip_id", 5]]
+  Rendered trips/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 150ms (Views: 138.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/trips" for 127.0.0.1 at 2017-02-10 16:22:15 -0500
+Processing by TripsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trips/index.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 202ms (Views: 195.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/trips/1" for 127.0.0.1 at 2017-02-10 16:22:20 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_trips" ON "users"."id" = "user_trips"."rider_id" WHERE "user_trips"."trip_id" = ?[0m  [["trip_id", 1]]
+  Rendered trips/show.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 138ms (Views: 79.7ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/trips/send-request" for 127.0.0.1 at 2017-02-10 16:22:25 -0500
+Processing by TripsController#send_request as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5fNuYDYfBgESzn7Sg1cEdaOvvR9+ELzXUZZp/33hEED5pSLSTQo/lAQ0NdoR1lvo5MbtIXVZfjaE9RmH9fh6jw==", "to_email"=>"stef@nycda.com", "from_email"=>"stef@nycda.com", "creator_id"=>"1", "current_user_id"=>"1", "trip_id"=>"1", "commit"=>"Send"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "user_trips" ("trip_id", "rider_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["trip_id", 1], ["rider_id", 1], ["created_at", 2017-02-10 21:22:25 UTC], ["updated_at", 2017-02-10 21:22:25 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+No template found for TripsController#send_request, rendering head :no_content
+Completed 204 No Content in 186ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/trips/1" for 127.0.0.1 at 2017-02-10 16:22:27 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_trips" ON "users"."id" = "user_trips"."rider_id" WHERE "user_trips"."trip_id" = ?[0m  [["trip_id", 1]]
+  Rendered trips/show.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 145ms (Views: 129.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-10 16:22:32 -0500
+Processing by WelcomeController#home as HTML
+  [1m[36mTrip Load (3.9ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 73ms (Views: 62.8ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/trips/5" for 127.0.0.1 at 2017-02-10 16:22:38 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_trips" ON "users"."id" = "user_trips"."rider_id" WHERE "user_trips"."trip_id" = ?[0m  [["trip_id", 5]]
+  Rendered trips/show.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 133ms (Views: 109.2ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/trips" for 127.0.0.1 at 2017-02-10 16:22:43 -0500
+Processing by TripsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trips/index.html.erb within layouts/application (88.6ms)
+Completed 200 OK in 214ms (Views: 189.4ms | ActiveRecord: 1.3ms)
+
+
+Started DELETE "/trips/5" for 127.0.0.1 at 2017-02-10 16:22:48 -0500
+Processing by TripsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XNmPnslu7i/ahYsEZxKGjWLFGKw/p3sPnXt1MMn9eXLyw4Y3LWEXzq0FV+UFwZeHjQ3ehmxesce1yipchfooqg==", "id"=>"5"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (3.1ms)[0m  [1m[31mDELETE FROM "trips" WHERE "trips"."id" = ?[0m  [["id", 5]]
+Redirected to http://localhost:3000/trips
+Completed 302 Found in 18ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/trips" for 127.0.0.1 at 2017-02-10 16:22:49 -0500
+Processing by TripsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Load (1.0ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trips/index.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 165ms (Views: 156.3ms | ActiveRecord: 1.7ms)
+
+
+Started DELETE "/trips/3" for 127.0.0.1 at 2017-02-10 16:22:55 -0500
+Processing by TripsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QV8iJOpmaeZ/i6CKvaL+vtn9kTzY+JFW3/UPh4tqY9XvRSuNDmmQBwgLfGvfce+0NjVXFosBW573RFDrx20yDQ==", "id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (2.5ms)[0m  [1m[31mDELETE FROM "trips" WHERE "trips"."id" = ?[0m  [["id", 3]]
+Redirected to http://localhost:3000/trips
+Completed 302 Found in 12ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/trips" for 127.0.0.1 at 2017-02-10 16:22:55 -0500
+Processing by TripsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trips/index.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 73ms (Views: 64.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-10 16:24:50 -0500
+Processing by WelcomeController#home as HTML
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 47ms (Views: 40.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/trips/4" for 127.0.0.1 at 2017-02-10 16:24:53 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_trips" ON "users"."id" = "user_trips"."rider_id" WHERE "user_trips"."trip_id" = ?[0m  [["trip_id", 4]]
+  Rendered trips/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 47ms (Views: 36.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-02-10 16:25:03 -0500
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/1
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-02-10 16:25:03 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 36ms (Views: 28.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/trips" for 127.0.0.1 at 2017-02-10 16:25:07 -0500
+Processing by TripsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trips/index.html.erb within layouts/application (45.1ms)
+Completed 200 OK in 142ms (Views: 125.9ms | ActiveRecord: 3.8ms)
+
+
+Started DELETE "/trips/4" for 127.0.0.1 at 2017-02-10 16:25:13 -0500
+Processing by TripsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"pR9VTeuAS/q1YTk2vihCKdNq+MAmrTCe2rRRCtncBX0LBVzkD4+yG8Lh5dfc+1MjPKI+6nVU+lbyBQ5mldtUpQ==", "id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.9ms)[0m  [1m[31mDELETE FROM "trips" WHERE "trips"."id" = ?[0m  [["id", 4]]
+Redirected to http://localhost:3000/trips
+Completed 302 Found in 6ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/trips" for 127.0.0.1 at 2017-02-10 16:25:13 -0500
+Processing by TripsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trips/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 32ms (Views: 27.1ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-02-10 16:25:16 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"GG1O/nmaoggFE/8rUK/zbbMHwoMoYi7fSOpPA0a5yHO2d0dXnZVb6XKTI8oyfOJnXM8EqXub5BdgWxBvCr6Zqw=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_created_at", nil], ["updated_at", 2017-02-10 21:25:16 UTC], ["id", 1]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-10 16:25:16 -0500
+Processing by WelcomeController#home as HTML
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 26ms (Views: 23.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-02-10 16:25:19 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 32ms (Views: 30.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-02-10 16:25:26 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gpuDe+GorIrdNPf4CLg2azu+ogncBMOlEBkr4Ked0+wjOQCgJ6bGABBmGXTg9IE13QAt3pz+D+obZStVfdgJdw==", "user"=>{"email"=>"vlad@gmail", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "vlad@gmail"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gpuDe+GorIrdNPf4CLg2azu+ogncBMOlEBkr4Ked0+wjOQCgJ6bGABBmGXTg9IE13QAt3pz+D+obZStVfdgJdw==", "user"=>{"email"=>"vlad@gmail", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 164ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-02-10 16:25:35 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zRokO9p4+YTNz1z/GTJ8a7QIFHVUIdxAwEcy2gBkwc1suKfgHHaTDgCdsnPxfss1UrabohTbEA/LOzJv2iEbVg==", "user"=>{"email"=>"claude@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "claude@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.2ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zRokO9p4+YTNz1z/GTJ8a7QIFHVUIdxAwEcy2gBkwc1suKfgHHaTDgCdsnPxfss1UrabohTbEA/LOzJv2iEbVg==", "user"=>{"email"=>"claude@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 156ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-02-10 16:25:43 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 44ms (Views: 40.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-02-10 16:25:52 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zxJwiJYgwWIoFe1fWXq4VLBhNIOHJe7xK22SnNnLlSMhxeKwJPKd0+yhgevjqQdbd96Hxxl25yfYe0i9yoUx7g==", "user"=>{"email"=>"stef@nycda.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "stef@nycda.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 132ms (ActiveRecord: 0.3ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zxJwiJYgwWIoFe1fWXq4VLBhNIOHJe7xK22SnNnLlSMhxeKwJPKd0+yhgevjqQdbd96Hxxl25yfYe0i9yoUx7g==", "user"=>{"email"=>"stef@nycda.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 159ms (Views: 25.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-02-10 16:26:00 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TZvkpdJdaVHMDWZBGnYJ3G86fhiJwXlridgBn3nV/pGjTHadYI814Ai5CvWgpbbTqIXNXBeScL16ztu+aptaXA==", "user"=>{"email"=>"stef@nycda.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "stef@nycda.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_created_at", 2017-02-10 21:26:00 UTC], ["updated_at", 2017-02-10 21:26:00 UTC], ["id", 1]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 7], ["current_sign_in_at", 2017-02-10 21:26:00 UTC], ["last_sign_in_at", 2017-02-10 21:21:11 UTC], ["updated_at", 2017-02-10 21:26:00 UTC], ["id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 152ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-02-10 16:26:00 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 32.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-10 16:26:04 -0500
+Processing by WelcomeController#home as HTML
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 38ms (Views: 31.7ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-02-10 16:27:31 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"AG9y3PPUwQA1D5oTmaFFwhupchSDHBvr3ATKWXbw5Ul9Kz5VfoXgJX7BLJgjjoMfePw1473NcptTlRx7eRhHsg=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_created_at", nil], ["updated_at", 2017-02-10 21:27:31 UTC], ["id", 1]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-10 16:27:31 -0500
+Processing by WelcomeController#home as HTML
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 37ms (Views: 33.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-10 16:27:38 -0500
+Processing by WelcomeController#home as HTML
+  [1m[36mTrip Load (0.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 45ms (Views: 40.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-02-10 16:29:13 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 98ms (Views: 94.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-02-10 16:29:26 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qDMiZKfoy/Slt7g2mPODDx2pH/GCqPJ9sCZ+Ko3FWKV2VedqfvnnF7BRlWr5yC6vrfHMO30DJijb5gux8n12Qg==", "user"=>{"email"=>"stef@nycda.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "stef@nycda.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_created_at", 2017-02-10 21:29:26 UTC], ["updated_at", 2017-02-10 21:29:26 UTC], ["id", 1]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 8], ["current_sign_in_at", 2017-02-10 21:29:26 UTC], ["last_sign_in_at", 2017-02-10 21:26:00 UTC], ["updated_at", 2017-02-10 21:29:26 UTC], ["id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 171ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2017-02-10 16:29:26 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 47ms (Views: 40.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/trips/new" for 127.0.0.1 at 2017-02-10 16:29:30 -0500
+Processing by TripsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered trips/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 80ms (Views: 66.0ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/trips" for 127.0.0.1 at 2017-02-10 16:29:57 -0500
+Processing by TripsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g7mAupuXlP9ZsymMTevoowIoQcBet/1ixLLGKRF2TkpGzTSi1e9R5r45zfVLr9COJ6E+KrAOdthFd2caiAaVSw==", "trip"=>{"origin"=>"New Jersey", "destination"=>"Washington Mall", "month"=>"2017-02-28T15:30", "creator_id"=>"1"}, "commit"=>"Create trip"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "trips" ("created_at", "updated_at", "origin", "destination", "month", "creator_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", 2017-02-10 21:29:57 UTC], ["updated_at", 2017-02-10 21:29:57 UTC], ["origin", "New Jersey"], ["destination", "Washington Mall"], ["month", 2017-02-28 15:30:00 UTC], ["creator_id", 1]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/trips
+Completed 302 Found in 15ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/trips" for 127.0.0.1 at 2017-02-10 16:29:57 -0500
+Processing by TripsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trips/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 71ms (Views: 63.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/trips/6" for 127.0.0.1 at 2017-02-10 16:30:08 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_trips" ON "users"."id" = "user_trips"."rider_id" WHERE "user_trips"."trip_id" = ?[0m  [["trip_id", 6]]
+  Rendered trips/show.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 127ms (Views: 92.8ms | ActiveRecord: 3.8ms)
+
+
+Started POST "/trips/send-request" for 127.0.0.1 at 2017-02-10 16:30:14 -0500
+Processing by TripsController#send_request as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FVvtBa+P3iqgdgQT5Jtf3Q0T7NaqL+ttN6OIYItOI+yL+82mCE2JUR3w3kxFpVpBKFV/eECcNqc0fk1QRdAAwQ==", "to_email"=>"stef@nycda.com", "from_email"=>"stef@nycda.com", "creator_id"=>"1", "current_user_id"=>"1", "trip_id"=>"6", "commit"=>"Send"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "user_trips" ("trip_id", "rider_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["trip_id", 6], ["rider_id", 1], ["created_at", 2017-02-10 21:30:14 UTC], ["updated_at", 2017-02-10 21:30:14 UTC]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+No template found for TripsController#send_request, rendering head :no_content
+Completed 204 No Content in 204ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/trips/6" for 127.0.0.1 at 2017-02-10 16:30:16 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_trips" ON "users"."id" = "user_trips"."rider_id" WHERE "user_trips"."trip_id" = ?[0m  [["trip_id", 6]]
+  Rendered trips/show.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 166ms (Views: 140.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/trips" for 127.0.0.1 at 2017-02-10 16:30:20 -0500
+Processing by TripsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trips/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 66ms (Views: 57.4ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/trips/2" for 127.0.0.1 at 2017-02-10 16:30:26 -0500
+Processing by TripsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jHMDl5ZpamrS08vGMlOiimAMoehmCK6bn0lf18JPGxEm709BUlJOUAphYqJLEhyG/qXO+Kd6Q/BcTkbYjRkE5Q==", "id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.3ms)[0m  [1m[31mDELETE FROM "trips" WHERE "trips"."id" = ?[0m  [["id", 2]]
+Redirected to http://localhost:3000/trips
+Completed 302 Found in 11ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/trips" for 127.0.0.1 at 2017-02-10 16:30:27 -0500
+Processing by TripsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trips/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 55ms (Views: 49.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-10 16:30:31 -0500
+Processing by WelcomeController#home as HTML
+  [1m[36mTrip Load (0.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 58ms (Views: 47.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/trips/6" for 127.0.0.1 at 2017-02-10 16:30:38 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_trips" ON "users"."id" = "user_trips"."rider_id" WHERE "user_trips"."trip_id" = ?[0m  [["trip_id", 6]]
+  Rendered trips/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 90ms (Views: 70.8ms | ActiveRecord: 2.2ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-02-10 16:30:43 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3+5jUHUdOjw2IQ1dwLerlYlyur9bnndXNsVRKbPyJtR1ci+GsSYeBu6TpDm59hWZF9vVr5rsmjz1wkgm/KQ5IA=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_created_at", nil], ["updated_at", 2017-02-10 21:30:43 UTC], ["id", 1]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 16ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-10 16:30:43 -0500
+Processing by WelcomeController#home as HTML
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 43ms (Views: 37.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-12 21:59:22 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#home as HTML
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 285ms (Views: 258.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-02-12 21:59:36 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (37.1ms)
+Completed 200 OK in 104ms (Views: 67.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-02-12 21:59:43 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 65ms (Views: 63.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-02-12 21:59:46 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 99ms (Views: 96.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-02-12 22:00:00 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 93ms (Views: 90.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-02-12 22:01:27 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FUkYTmzkWIbu5hmYheRjC24DURLngcQTh0+M1zPd2tY3BDqgDPT8JyOm5yGfFUlrEYfnGMs9iM6BllmXWs4L1Q==", "user"=>{"fname"=>"Francine", "lname"=>"Moyse", "gender"=>"female", "smoking"=>"no", "email"=>"francine@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x007fc3994c9e10 @tempfile=#<Tempfile:/var/folders/wg/xfxn47nd5v1cxdmzhth811nc0000gn/T/RackMultipart20170212-30931-1dlycl0.jpg>, @original_filename="qprj0bmb5fk-sergey-zolkin.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[avatar]\"; filename=\"qprj0bmb5fk-sergey-zolkin.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Command :: file -b --mime '/var/folders/wg/xfxn47nd5v1cxdmzhth811nc0000gn/T/6db6de96727264919ef0d700e3a1add820170212-30931-1jeyx5h.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/wg/xfxn47nd5v1cxdmzhth811nc0000gn/T/6db6de96727264919ef0d700e3a1add820170212-30931-19lziep.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/wg/xfxn47nd5v1cxdmzhth811nc0000gn/T/6db6de96727264919ef0d700e3a1add820170212-30931-19lziep.jpg[0]'
+Command :: convert '/var/folders/wg/xfxn47nd5v1cxdmzhth811nc0000gn/T/6db6de96727264919ef0d700e3a1add820170212-30931-19lziep.jpg[0]' -auto-orient '/var/folders/wg/xfxn47nd5v1cxdmzhth811nc0000gn/T/13c372677bc8f142859d774bfbcbccc220170212-30931-d6k6or'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/wg/xfxn47nd5v1cxdmzhth811nc0000gn/T/6db6de96727264919ef0d700e3a1add820170212-30931-19lziep.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/wg/xfxn47nd5v1cxdmzhth811nc0000gn/T/6db6de96727264919ef0d700e3a1add820170212-30931-19lziep.jpg[0]'
+Command :: convert '/var/folders/wg/xfxn47nd5v1cxdmzhth811nc0000gn/T/6db6de96727264919ef0d700e3a1add820170212-30931-19lziep.jpg[0]' -auto-orient '/var/folders/wg/xfxn47nd5v1cxdmzhth811nc0000gn/T/13c372677bc8f142859d774bfbcbccc220170212-30931-1us8hbl'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "francine@gmail.com"], ["LIMIT", 1]]
+Command :: file -b --mime '/var/folders/wg/xfxn47nd5v1cxdmzhth811nc0000gn/T/6db6de96727264919ef0d700e3a1add820170212-30931-1a8925r.jpg'
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "avatar_file_name", "avatar_content_type", "avatar_file_size", "avatar_updated_at", "fname", "lname", "gender", "smoking") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "francine@gmail.com"], ["encrypted_password", "$2a$11$erm885pPFlMf6qUWKq4cleq4PLXS3rcpeT0AoDiW0waHEPH7Msa/S"], ["created_at", 2017-02-13 03:01:29 UTC], ["updated_at", 2017-02-13 03:01:29 UTC], ["avatar_file_name", "qprj0bmb5fk-sergey-zolkin.jpg"], ["avatar_content_type", "image/jpeg"], ["avatar_file_size", 1328494], ["avatar_updated_at", 2017-02-13 03:01:27 UTC], ["fname", "Francine"], ["lname", "Moyse"], ["gender", "female"], ["smoking", true]]
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-02-13 03:01:29 UTC], ["last_sign_in_at", 2017-02-13 03:01:29 UTC], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", 2017-02-13 03:01:29 UTC], ["id", 2]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 2166ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2017-02-12 22:01:29 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 32ms (Views: 25.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-12 22:01:33 -0500
+Processing by WelcomeController#home as HTML
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 43ms (Views: 39.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/trips/6" for 127.0.0.1 at 2017-02-12 22:01:38 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_trips" ON "users"."id" = "user_trips"."rider_id" WHERE "user_trips"."trip_id" = ?[0m  [["trip_id", 6]]
+  Rendered trips/show.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 72ms (Views: 27.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/trips" for 127.0.0.1 at 2017-02-12 22:02:01 -0500
+Processing by TripsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trips/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 48ms (Views: 43.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/trips/new" for 127.0.0.1 at 2017-02-12 22:02:06 -0500
+Processing by TripsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered trips/new.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 54ms (Views: 44.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/trips" for 127.0.0.1 at 2017-02-12 22:02:41 -0500
+Processing by TripsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tO22v8oIdx6uwrwxSTbIubM7P9D+M3iixl5Q3OZRlQQygmm4IRjtCk3Z0GoSQU3XvG/HdZVTXfjP3PrlLXc4UQ==", "trip"=>{"origin"=>"Boston", "destination"=>"Maryland", "month"=>"2017-03-20T17:30", "creator_id"=>"1"}, "commit"=>"Create trip"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "trips" ("created_at", "updated_at", "origin", "destination", "month", "creator_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", 2017-02-13 03:02:41 UTC], ["updated_at", 2017-02-13 03:02:41 UTC], ["origin", "Boston"], ["destination", "Maryland"], ["month", 2017-03-20 17:30:00 UTC], ["creator_id", 1]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/trips
+Completed 302 Found in 13ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/trips" for 127.0.0.1 at 2017-02-12 22:02:41 -0500
+Processing by TripsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trips/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 35ms (Views: 30.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-12 22:02:43 -0500
+Processing by WelcomeController#home as HTML
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 50ms (Views: 46.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/trips/new" for 127.0.0.1 at 2017-02-12 22:02:58 -0500
+Processing by TripsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered trips/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 43ms (Views: 39.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/trips" for 127.0.0.1 at 2017-02-12 22:03:32 -0500
+Processing by TripsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R91gK4uMvex7aVJYi0rmMPKbTMLOzF7Rpck1xo8c30fBsr8sYJwn+JhyPgPQPWNe/c+0Z6Wse4usS5//RDpyEg==", "trip"=>{"origin"=>"Atlanta", "destination"=>"orlando", "month"=>"2017-02-20T15:30", "creator_id"=>"1"}, "commit"=>"Create trip"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "trips" ("created_at", "updated_at", "origin", "destination", "month", "creator_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", 2017-02-13 03:03:32 UTC], ["updated_at", 2017-02-13 03:03:32 UTC], ["origin", "Atlanta"], ["destination", "orlando"], ["month", 2017-02-20 15:30:00 UTC], ["creator_id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/trips
+Completed 302 Found in 11ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/trips" for 127.0.0.1 at 2017-02-12 22:03:32 -0500
+Processing by TripsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trips/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 36ms (Views: 32.9ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/trips/6" for 127.0.0.1 at 2017-02-12 22:03:47 -0500
+Processing by TripsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8f3YyQVV8WGrEaGrLvy9O3sSd78qeBsjJt5l8lMEU+OJSBQ7NFX9Amy73v9gR9VurwYFaFGfpd0htTSSwREiBg==", "id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (1.4ms)[0m  [1m[31mDELETE FROM "trips" WHERE "trips"."id" = ?[0m  [["id", 6]]
+Redirected to http://localhost:3000/trips
+Completed 302 Found in 5ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/trips" for 127.0.0.1 at 2017-02-12 22:03:47 -0500
+Processing by TripsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trips/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 50ms (Views: 45.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-12 22:03:52 -0500
+Processing by WelcomeController#home as HTML
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 51ms (Views: 48.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/trips" for 127.0.0.1 at 2017-02-12 22:04:04 -0500
+Processing by TripsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trips/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 73ms (Views: 65.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/trips/8/edit" for 127.0.0.1 at 2017-02-12 22:04:10 -0500
+Processing by TripsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering trips/edit.html.erb within layouts/application
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  Rendered trips/edit.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 54ms (Views: 41.8ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/trips/8" for 127.0.0.1 at 2017-02-12 22:04:18 -0500
+Processing by TripsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yQ6WDtkKmoEVFxMzP/7eX7DfYnyU0L+O6lYZ2On2DAhYRDSrI1JNjNQDdc5gGkiOdL64dky/b+hRYG1Q4zY4yQ==", "trip"=>{"origin"=>"Atlanta", "destination"=>"Orlando", "month"=>"2017-02-20T15:30:00", "creator_id"=>"1"}, "commit"=>"Edit itinirary", "id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "trips" SET "destination" = ?, "updated_at" = ? WHERE "trips"."id" = ?[0m  [["destination", "Orlando"], ["updated_at", 2017-02-13 03:04:18 UTC], ["id", 8]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/trips/8
+Completed 302 Found in 10ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/trips/8" for 127.0.0.1 at 2017-02-12 22:04:18 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_trips" ON "users"."id" = "user_trips"."rider_id" WHERE "user_trips"."trip_id" = ?[0m  [["trip_id", 8]]
+  Rendered trips/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 47ms (Views: 34.1ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-02-12 22:04:26 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"n51Yl4ZwXjujBoOMGvxOVosdAHNRrruVgDC0sS6yFu/nKJRlt3BSWGSs/NhURyYDXwlypCpJBWuHW+XRvKdnCg=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-12 22:04:26 -0500
+Processing by WelcomeController#home as HTML
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 29ms (Views: 27.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-02-12 22:06:05 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 210ms (Views: 203.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2017-02-12 22:06:14 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9bdXa3nQNFBjGpBKfnFB/7TFjI16821ly78LOzVxFSoZyboAc1er/Klw69xdhnDCMtP3ng/8AXnzsB8ZjU1mSQ==", "user"=>{"email"=>"francine@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "francine@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_created_at", 2017-02-13 03:06:14 UTC], ["updated_at", 2017-02-13 03:06:14 UTC], ["id", 2]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 2], ["current_sign_in_at", 2017-02-13 03:06:14 UTC], ["updated_at", 2017-02-13 03:06:14 UTC], ["id", 2]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 173ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2017-02-12 22:06:14 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 40ms (Views: 32.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-12 22:06:18 -0500
+Processing by WelcomeController#home as HTML
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (3.5ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 81ms (Views: 76.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/trips/8" for 127.0.0.1 at 2017-02-12 22:06:25 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_trips" ON "users"."id" = "user_trips"."rider_id" WHERE "user_trips"."trip_id" = ?[0m  [["trip_id", 8]]
+  Rendered trips/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 79ms (Views: 61.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/trips/send-request" for 127.0.0.1 at 2017-02-12 22:06:31 -0500
+Processing by TripsController#send_request as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SckdWIhBHzeVc8x7wIFMSwGteF77gUjQ6wstr0SglEb89TrVXVHjTdRPHhIfED/5EAsNk3aDRfkwIpJw7cdkcw==", "to_email"=>"stef@nycda.com", "from_email"=>"francine@gmail.com", "creator_id"=>"1", "current_user_id"=>"2", "trip_id"=>"8", "commit"=>"Send"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "user_trips" ("trip_id", "rider_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["trip_id", 8], ["rider_id", 2], ["created_at", 2017-02-13 03:06:31 UTC], ["updated_at", 2017-02-13 03:06:31 UTC]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+No template found for TripsController#send_request, rendering head :no_content
+Completed 204 No Content in 195ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/trips/8" for 127.0.0.1 at 2017-02-12 22:06:33 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTrip Load (3.8ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_trips" ON "users"."id" = "user_trips"."rider_id" WHERE "user_trips"."trip_id" = ?[0m  [["trip_id", 8]]
+  Rendered trips/show.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 157ms (Views: 122.0ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/trips" for 127.0.0.1 at 2017-02-12 22:06:37 -0500
+Processing by TripsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trips/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 90ms (Views: 70.0ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/trips/8" for 127.0.0.1 at 2017-02-12 22:06:47 -0500
+Processing by TripsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"a0y/kA6D/NdpaAiXZllOXVcsVdXPaV8jkPMvftJ396j3KWUrhYXuD2kZJslIwJoNN7BqXQgpSv5lmBLuveSUZA==", "id"=>"8"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (2.0ms)[0m  [1m[31mDELETE FROM "trips" WHERE "trips"."id" = ?[0m  [["id", 8]]
+Redirected to http://localhost:3000/trips
+Completed 302 Found in 12ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/trips" for 127.0.0.1 at 2017-02-12 22:06:47 -0500
+Processing by TripsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trips/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 52ms (Views: 42.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-12 22:06:51 -0500
+Processing by WelcomeController#home as HTML
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 78ms (Views: 71.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/trips/1" for 127.0.0.1 at 2017-02-12 22:06:58 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_trips" ON "users"."id" = "user_trips"."rider_id" WHERE "user_trips"."trip_id" = ?[0m  [["trip_id", 1]]
+  Rendered trips/show.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 106ms (Views: 70.4ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/trips/send-request" for 127.0.0.1 at 2017-02-12 22:07:03 -0500
+Processing by TripsController#send_request as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JiqttFN+Drw538qqYa1rh0kfBxEFwx4gcWD4n2qb+TuTFoo5hm7yxnjjGMO+PBg1WLly3IjBEwmqSUdAw/wJDg==", "to_email"=>"stef@nycda.com", "from_email"=>"francine@gmail.com", "creator_id"=>"1", "current_user_id"=>"2", "trip_id"=>"1", "commit"=>"Send"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "user_trips" ("trip_id", "rider_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["trip_id", 1], ["rider_id", 2], ["created_at", 2017-02-13 03:07:03 UTC], ["updated_at", 2017-02-13 03:07:03 UTC]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+No template found for TripsController#send_request, rendering head :no_content
+Completed 204 No Content in 230ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/trips/1" for 127.0.0.1 at 2017-02-12 22:07:04 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.6ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_trips" ON "users"."id" = "user_trips"."rider_id" WHERE "user_trips"."trip_id" = ?[0m  [["trip_id", 1]]
+  Rendered trips/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 146ms (Views: 126.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/trips/new" for 127.0.0.1 at 2017-02-12 22:07:06 -0500
+Processing by TripsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered trips/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 96ms (Views: 88.2ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/trips" for 127.0.0.1 at 2017-02-12 22:07:22 -0500
+Processing by TripsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9U95AQI5BNhpGZzvzZBHPnGA2aFMBRUSNKqV1XG7Qvx4f4KlEn0MH7VTpRr2flp/kB14FjMh+ZNf+7jac5Yu+w==", "trip"=>{"origin"=>"Chicago", "destination"=>"Boston", "month"=>"2017-02-22T15:30", "creator_id"=>"1"}, "commit"=>"Create trip"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "trips" ("created_at", "updated_at", "origin", "destination", "month", "creator_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", 2017-02-13 03:07:22 UTC], ["updated_at", 2017-02-13 03:07:22 UTC], ["origin", "Chicago"], ["destination", "Boston"], ["month", 2017-02-22 15:30:00 UTC], ["creator_id", 1]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/trips
+Completed 302 Found in 18ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/trips" for 127.0.0.1 at 2017-02-12 22:07:22 -0500
+Processing by TripsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trips/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 78ms (Views: 66.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-13 10:20:01 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#home as HTML
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 466ms (Views: 424.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/trips/7" for 127.0.0.1 at 2017-02-13 10:30:07 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.8ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_trips" ON "users"."id" = "user_trips"."rider_id" WHERE "user_trips"."trip_id" = ?[0m  [["trip_id", 7]]
+  Rendered trips/show.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 111ms (Views: 46.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-02-13 10:30:10 -0500
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/2
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 35ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2017-02-13 10:30:10 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 27ms (Views: 22.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/trips/new" for 127.0.0.1 at 2017-02-13 10:30:23 -0500
+Processing by TripsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered trips/new.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 50ms (Views: 43.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-13 10:30:27 -0500
+Processing by WelcomeController#home as HTML
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 79ms (Views: 74.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/trips/1" for 127.0.0.1 at 2017-02-13 10:30:35 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_trips" ON "users"."id" = "user_trips"."rider_id" WHERE "user_trips"."trip_id" = ?[0m  [["trip_id", 1]]
+  Rendered trips/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 44ms (Views: 33.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/trips" for 127.0.0.1 at 2017-02-13 10:30:52 -0500
+Processing by TripsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trips/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 43ms (Views: 38.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/trips/new" for 127.0.0.1 at 2017-02-13 10:35:19 -0500
+Processing by TripsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered trips/new.html.erb within layouts/application (10.4ms)
+Completed 200 OK in 95ms (Views: 90.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-13 10:35:22 -0500
+Processing by WelcomeController#home as HTML
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 72ms (Views: 67.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/trips/7" for 127.0.0.1 at 2017-02-13 10:35:29 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_trips" ON "users"."id" = "user_trips"."rider_id" WHERE "user_trips"."trip_id" = ?[0m  [["trip_id", 7]]
+  Rendered trips/show.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 75ms (Views: 58.6ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/trips/send-request" for 127.0.0.1 at 2017-02-13 10:35:44 -0500
+Processing by TripsController#send_request as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YDCbGbYOHjbd5/UIwuL2EKFp122ycnj8TVpwrDeEGsHVDLyUYx7iTJzbJ2Edc4WisM+ioD9wddWWc89znuPq9A==", "to_email"=>"stef@nycda.com", "from_email"=>"francine@gmail.com", "creator_id"=>"1", "current_user_id"=>"2", "trip_id"=>"7", "commit"=>"Send"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "user_trips" ("trip_id", "rider_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["trip_id", 7], ["rider_id", 2], ["created_at", 2017-02-13 15:35:44 UTC], ["updated_at", 2017-02-13 15:35:44 UTC]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+No template found for TripsController#send_request, rendering head :no_content
+Completed 204 No Content in 136ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/trips/7" for 127.0.0.1 at 2017-02-13 10:35:45 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_trips" ON "users"."id" = "user_trips"."rider_id" WHERE "user_trips"."trip_id" = ?[0m  [["trip_id", 7]]
+  Rendered trips/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 55ms (Views: 46.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/trips" for 127.0.0.1 at 2017-02-13 10:35:56 -0500
+Processing by TripsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trips/index.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 77ms (Views: 72.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/trips/7/edit" for 127.0.0.1 at 2017-02-13 10:36:20 -0500
+Processing by TripsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering trips/edit.html.erb within layouts/application
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  Rendered trips/edit.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 47ms (Views: 42.2ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/trips/7" for 127.0.0.1 at 2017-02-13 10:36:30 -0500
+Processing by TripsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OnaVnzob9CvarpjV+46d6lRtS7KEnsRcDxtQQWLJdWeGEBlu/2POG44C+jN2rY+kjm8gzSo1CZ9e0obUKDkCFA==", "trip"=>{"origin"=>"Boston", "destination"=>"Connecticut", "month"=>"2017-03-20T17:30:00", "creator_id"=>"1"}, "commit"=>"Edit itinirary", "id"=>"7"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "trips" SET "destination" = ?, "updated_at" = ? WHERE "trips"."id" = ?[0m  [["destination", "Connecticut"], ["updated_at", 2017-02-13 15:36:30 UTC], ["id", 7]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/trips/7
+Completed 302 Found in 13ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/trips/7" for 127.0.0.1 at 2017-02-13 10:36:30 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_trips" ON "users"."id" = "user_trips"."rider_id" WHERE "user_trips"."trip_id" = ?[0m  [["trip_id", 7]]
+  Rendered trips/show.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 41ms (Views: 30.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-13 10:36:40 -0500
+Processing by WelcomeController#home as HTML
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 41ms (Views: 37.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/trips/1" for 127.0.0.1 at 2017-02-13 10:39:39 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.1ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_trips" ON "users"."id" = "user_trips"."rider_id" WHERE "user_trips"."trip_id" = ?[0m  [["trip_id", 1]]
+  Rendered trips/show.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 41ms (Views: 33.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/trips/1" for 127.0.0.1 at 2017-02-13 10:40:20 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_trips" ON "users"."id" = "user_trips"."rider_id" WHERE "user_trips"."trip_id" = ?[0m  [["trip_id", 1]]
+  Rendered trips/show.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 52ms (Views: 39.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-13 10:40:24 -0500
+Processing by WelcomeController#home as HTML
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Completed 200 OK in 83ms (Views: 78.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/trips/9" for 127.0.0.1 at 2017-02-13 10:40:33 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_trips" ON "users"."id" = "user_trips"."rider_id" WHERE "user_trips"."trip_id" = ?[0m  [["trip_id", 9]]
+  Rendered trips/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 41ms (Views: 32.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/trips/send-request" for 127.0.0.1 at 2017-02-13 10:40:45 -0500
+Processing by TripsController#send_request as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uGsKpOIoHx9MQJ4dQZ80f2NaObRjpbKG5LtTHshJ3h0NVy0pNzjjZQ18THSeDkfNcvxMee6nv68/kuzBYS4uKA==", "to_email"=>"stef@nycda.com", "from_email"=>"francine@gmail.com", "creator_id"=>"1", "current_user_id"=>"2", "trip_id"=>"9", "commit"=>"Send"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "user_trips" ("trip_id", "rider_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["trip_id", 9], ["rider_id", 2], ["created_at", 2017-02-13 15:40:45 UTC], ["updated_at", 2017-02-13 15:40:45 UTC]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+No template found for TripsController#send_request, rendering head :no_content
+Completed 204 No Content in 134ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/trips/9" for 127.0.0.1 at 2017-02-13 10:40:47 -0500
+Processing by TripsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering trips/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_trips" ON "users"."id" = "user_trips"."rider_id" WHERE "user_trips"."trip_id" = ?[0m  [["trip_id", 9]]
+  Rendered trips/show.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 71ms (Views: 61.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/trips/new" for 127.0.0.1 at 2017-02-13 10:40:52 -0500
+Processing by TripsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering trips/new.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered trips/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 43ms (Views: 39.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2017-02-13 10:40:55 -0500
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/users/2
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2017-02-13 10:40:55 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 35ms (Views: 30.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/trips" for 127.0.0.1 at 2017-02-13 10:41:00 -0500
+Processing by TripsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trips/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 43ms (Views: 39.6ms | ActiveRecord: 1.0ms)
+
+
+Started DELETE "/trips/9" for 127.0.0.1 at 2017-02-13 10:41:09 -0500
+Processing by TripsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"NKFW5UoYmx94EwqWEZC3pswRaj9ZTGuqm1pd5iFRum2oxIxewR6Jx3hiJMg/CWP2rI1Vt54MfnduMWB2TsLZoQ==", "id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "trips" WHERE "trips"."id" = ?[0m  [["id", 9]]
+Redirected to http://localhost:3000/trips
+Completed 302 Found in 5ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/trips" for 127.0.0.1 at 2017-02-13 10:41:09 -0500
+Processing by TripsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering trips/index.html.erb within layouts/application
+  [1m[36mTrip Load (0.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered trips/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 33ms (Views: 29.2ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2017-02-13 12:32:15 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ixZea7E9bMLZptZMv6L1s1+87Gho9zauniK192s8Ic0Xc4TQOjt+GtnX+BKROyHjPyDT4K+3I3NrSYhnBK9CAQ=="}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_created_at", nil], ["updated_at", 2017-02-13 17:32:15 UTC], ["id", 2]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 54ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-02-13 12:32:15 -0500
+Processing by WelcomeController#home as HTML
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  Rendering welcome/home.html.erb within layouts/application
+  Rendered welcome/home.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 48ms (Views: 43.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2017-02-13 12:32:19 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (34.5ms)
+Completed 200 OK in 68ms (Views: 65.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-02-13 12:33:07 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EJtnsd07McLCgof03W/55hhPbCTKrBqhwn2VSxBpAaWoLYxXeba9bbNBd04hIOydzbFAF/woMQL5b7nblP0GQQ==", "user"=>{"fname"=>"demoapp", "lname"=>"demo", "gender"=>"male", "smoking"=>"no", "email"=>"demo@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "avatar"=>#<ActionDispatch::Http::UploadedFile:0x007f8766a61900 @tempfile=#<Tempfile:/var/folders/wg/xfxn47nd5v1cxdmzhth811nc0000gn/T/RackMultipart20170213-31974-1wgw8rj.jpg>, @original_filename="qprj0bmb5fk-sergey-zolkin.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"user[avatar]\"; filename=\"qprj0bmb5fk-sergey-zolkin.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Sign up"}
+Command :: file -b --mime '/var/folders/wg/xfxn47nd5v1cxdmzhth811nc0000gn/T/6db6de96727264919ef0d700e3a1add820170213-31974-uj853t.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/wg/xfxn47nd5v1cxdmzhth811nc0000gn/T/6db6de96727264919ef0d700e3a1add820170213-31974-1glgow7.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/wg/xfxn47nd5v1cxdmzhth811nc0000gn/T/6db6de96727264919ef0d700e3a1add820170213-31974-1glgow7.jpg[0]'
+Command :: convert '/var/folders/wg/xfxn47nd5v1cxdmzhth811nc0000gn/T/6db6de96727264919ef0d700e3a1add820170213-31974-1glgow7.jpg[0]' -auto-orient '/var/folders/wg/xfxn47nd5v1cxdmzhth811nc0000gn/T/4d64767357f30f43cf8bc95d9bc2aa0320170213-31974-1lwkx5n'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/wg/xfxn47nd5v1cxdmzhth811nc0000gn/T/6db6de96727264919ef0d700e3a1add820170213-31974-1glgow7.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/wg/xfxn47nd5v1cxdmzhth811nc0000gn/T/6db6de96727264919ef0d700e3a1add820170213-31974-1glgow7.jpg[0]'
+Command :: convert '/var/folders/wg/xfxn47nd5v1cxdmzhth811nc0000gn/T/6db6de96727264919ef0d700e3a1add820170213-31974-1glgow7.jpg[0]' -auto-orient '/var/folders/wg/xfxn47nd5v1cxdmzhth811nc0000gn/T/4d64767357f30f43cf8bc95d9bc2aa0320170213-31974-1xdw57z'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "demo@gmail.com"], ["LIMIT", 1]]
+Command :: file -b --mime '/var/folders/wg/xfxn47nd5v1cxdmzhth811nc0000gn/T/6db6de96727264919ef0d700e3a1add820170213-31974-1u95545.jpg'
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "avatar_file_name", "avatar_content_type", "avatar_file_size", "avatar_updated_at", "fname", "lname", "gender", "smoking") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "demo@gmail.com"], ["encrypted_password", "$2a$11$b2Y0EZr8ciKuLCEszuhj3ODxuTdhsn96DWoAx9B8eu0kZJ0C/3482"], ["created_at", 2017-02-13 17:33:09 UTC], ["updated_at", 2017-02-13 17:33:09 UTC], ["avatar_file_name", "qprj0bmb5fk-sergey-zolkin.jpg"], ["avatar_content_type", "image/jpeg"], ["avatar_file_size", 1328494], ["avatar_updated_at", 2017-02-13 17:33:07 UTC], ["fname", "demoapp"], ["lname", "demo"], ["gender", "male"], ["smoking", true]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = ?, "current_sign_in_at" = ?, "last_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_ip" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-02-13 17:33:09 UTC], ["last_sign_in_at", 2017-02-13 17:33:09 UTC], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_ip", "127.0.0.1"], ["updated_at", 2017-02-13 17:33:09 UTC], ["id", 3]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 2172ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2017-02-13 12:33:09 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 38ms (Views: 34.0ms | ActiveRecord: 0.5ms)
+
+
