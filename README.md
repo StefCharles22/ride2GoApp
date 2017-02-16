@@ -22,3 +22,4 @@ Technology used:
     - HTML
     - SCSS
     - Javascript
+    - Materialize
