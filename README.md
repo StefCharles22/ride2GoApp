@@ -4,8 +4,8 @@ Github [Link](https://github.com/StefCharles22/ride2GoApp)
 
 Heroku [Link](https://ride2goapp.herokuapp.com/)
 
-Dummy Heroku login :demoapp  
-             Password: password
+Dummy Heroku login :test@test.com  
+             Password: allguests
 
 About this app
 
